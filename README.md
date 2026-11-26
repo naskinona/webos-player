@@ -34,7 +34,8 @@ A full-featured streaming application built with React, TypeScript, and Vite, de
 
 1. Clone and navigate to the project:
 ```bash
-cd C:\Filma\Netflix
+git clone https://github.com/naskinona/webos-player.git
+cd webos-player
 ```
 
 2. Install dependencies:
