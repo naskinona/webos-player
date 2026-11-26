@@ -1,0 +1,142 @@
+:root {
+  --netflix-red: #e50914;
+  --netflix-red-hover: #f40612;
+  --netflix-black: #000000;
+  --netflix-dark-gray: #141414;
+  --netflix-gray: #1f1f1f;
+  --netflix-light-gray: #333333;
+  --netflix-white: #ffffff;
+  --netflix-off-white: #e5e5e5;
+  --netflix-muted: #808080;
+  --focus-ring: 3px solid var(--netflix-red);
+  --card-radius: 4px;
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--netflix-black);
+  color: var(--netflix-white);
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Focus styles for spatial navigation */
+[data-focusable]:focus,
+[data-focusable].focused {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+  z-index: 10;
+}
+
+/* Focus visible for keyboard but not mouse */
+[data-focusable]:focus:not(:focus-visible) {
+  outline: none;
+}
+
+[data-focusable]:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Scrollbar hiding */
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Selection */
+::selection {
+  background: var(--netflix-red);
+  color: var(--netflix-white);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-medium) ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp var(--transition-medium) ease forwards;
+}
+
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

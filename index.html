@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Netflix-like streaming app for webOS TV" />
+    <title>Netflix</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body, #root {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+        color: #fff;
+        font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      /* Spatial navigation styles */
+      [data-focusable]:focus {
+        outline: 3px solid #e50914;
+        outline-offset: 2px;
+      }
+      [data-focusable].focused {
+        outline: 3px solid #e50914;
+        outline-offset: 2px;
+      }
+      /* Scrollbar hiding */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      * {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

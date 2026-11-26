@@ -1,0 +1,30 @@
+{
+  "name": "netflix-webos",
+  "version": "1.0.0",
+  "description": "Netflix-like streaming app for webOS TV",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "webos:pack": "webos-cli pack .",
+    "webos:install": "webos-cli install --device <device-ip>",
+    "webos:launch": "webos-cli launch com.netflix.webos",
+    "lint": "eslint src --ext js,jsx,ts,tsx"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.0",
+    "typescript": "^5.3.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "com.netflix.webos",
+  "version": "1.0.0",
+  "vendor": "Netflix WebOS Team",
+  "type": "web",
+  "main": "index.html",
+  "title": "Netflix",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "bgImage": "bgImage.png",
+  "splashBackground": "splash.png",
+  "transparent": false,
+  "disableBackHistoryAPI": false,
+  "requiredMemory": 256,
+  "maxMemory": 512,
+  "cpu": "arm64",
+  "resolution": "1920x1080",
+  "handlesRelaunch": true,
+  "inspectable": true,
+  "webOSTV": true,
+  "permissions": [
+    "internet",
+    "mediaPlayback",
+    "mediaRecording",
+    "storage"
+  ]
+}
